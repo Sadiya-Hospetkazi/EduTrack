@@ -1,0 +1,23 @@
+# Secrets
+src/main/resources/application.properties
+
+# Maven build files
+target/
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# IntelliJ IDEA
+.idea/
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
