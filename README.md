@@ -1,273 +1,193 @@
-# 🎓 EduTrack — Online Learning & Course Management Platform
+# 🎓 EduTrack
 
-> A full-stack e-learning platform designed to connect **students, trainers, and administrators** through a centralized course management and learning system.
+### Online Learning & Course Management Platform
 
-EduTrack is a Java-based full-stack web application built with **Spring Boot, Spring Security, JPA/Hibernate, PostgreSQL, Thymeleaf, and Razorpay**. It provides a complete learning workflow — from user registration and course enrollment to online payments, learning progress, mock tests, and certificate generation.
+**EduTrack** is a full-stack e-learning platform built with **Java and Spring Boot**, designed to manage courses, students, trainers, enrollments, online payments, learning progress, mock tests, reviews, and certificates.
 
 ---
 
-## 🚀 Key Features
+## ✨ Features
 
 ### 👨‍🎓 Student
 
-* Secure student registration and login
-* Email OTP verification
-* Password recovery using OTP
-* Browse and explore available courses
-* View detailed course information
-* Enroll in courses
-* Online course payments through Razorpay
-* Track course and module progress
-* Access lessons and learning materials
-* Attempt course mock tests
-* View test attempts and results
-* Submit course reviews
-* Generate course completion certificates
-* Verify certificates
-* Download certificates as PDF
+* 🔐 Registration & secure login
+* 📧 Email OTP verification
+* 📚 Browse and enroll in courses
+* 💳 Online course payment with Razorpay
+* 📈 Track course & module progress
+* 📝 Attempt mock tests
+* ⭐ Submit course reviews
+* 🏆 Generate & verify certificates
+* 📄 Download certificates as PDF
 
 ### 👨‍🏫 Trainer
 
-* Trainer registration and authentication
-* Trainer dashboard
-* Create and manage courses
-* Update course information
-* Delete courses
-* Organize courses by categories
-* Manage course modules
-* Manage lessons
-* Create mock tests
-* Add and manage questions
-* Manage course content
+* 🔐 Trainer authentication
+* 📚 Create & manage courses
+* 📂 Manage course categories
+* 📦 Manage modules & lessons
+* 📝 Create mock tests
+* ❓ Manage questions
+* 👥 Manage course content
 
-### 👨‍💼 Administrator
+### 👨‍💼 Admin
 
-* Admin dashboard
-* Manage students
-* Manage trainers
-* Manage courses
-* Manage course categories
-* Monitor enrollments
-* View platform information and statistics
+* 📊 Admin dashboard
+* 👨‍🎓 Manage students
+* 👨‍🏫 Manage trainers
+* 📚 Manage courses
+* 📂 Manage categories
+* 📋 Monitor enrollments
 
 ---
 
-## 💳 Online Payment
+## 🛠️ Tech Stack
 
-EduTrack integrates **Razorpay** to support online course payments.
+### Backend
 
-### Payment Workflow
+![Java](https://img.shields.io/badge/Java-21-orange?style=for-the-badge\&logo=openjdk)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen?style=for-the-badge\&logo=springboot)
+![Spring Security](https://img.shields.io/badge/Spring%20Security-6.x-green?style=for-the-badge\&logo=springsecurity)
+![Hibernate](https://img.shields.io/badge/Hibernate-ORM-brown?style=for-the-badge\&logo=hibernate)
+![Maven](https://img.shields.io/badge/Maven-Build-red?style=for-the-badge\&logo=apachemaven)
 
-```text
-Student
-   │
-   ▼
-Select Course
-   │
-   ▼
-Create Payment Order
-   │
-   ▼
-Razorpay Checkout
-   │
-   ▼
-Payment Completed
-   │
-   ▼
-Verify Payment
-   │
-   ▼
-Successful Verification
-   │
-   ▼
-Course Enrollment
-```
+### Frontend
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge\&logo=html5)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge\&logo=css3)
+![Thymeleaf](https://img.shields.io/badge/Thymeleaf-005F0F?style=for-the-badge\&logo=thymeleaf)
+
+### Database & Integration
+
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge\&logo=postgresql)
+![Razorpay](https://img.shields.io/badge/Razorpay-3395FF?style=for-the-badge)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge\&logo=git)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge\&logo=github)
 
 ---
 
-## 🔐 Authentication & Security
-
-The application uses **Spring Security** to provide authentication and role-based authorization.
-
-Supported roles include:
-
-```text
-ADMIN
-TRAINER
-STUDENT
-```
-
-Security features include:
-
-* Login authentication
-* Role-based access control
-* Email OTP verification
-* Password recovery
-* Protected administrative functionality
-* Protected trainer functionality
-* Secure student functionality
-
----
-
-## 📚 Learning Management
-
-The learning system follows a structured hierarchy:
-
-```text
-Course
-  │
-  ├── Module
-  │     ├── Lesson
-  │     ├── Lesson
-  │     └── Lesson
-  │
-  ├── Module
-  │     ├── Lesson
-  │     └── Lesson
-  │
-  └── Mock Test
-        ├── Question
-        ├── Question
-        └── Question
-```
-
-Students can track their learning progress through courses and modules.
-
----
-
-## 🏆 Certificate System
-
-EduTrack provides a complete certificate workflow.
-
-```text
-Complete Course
-      ↓
-Generate Certificate
-      ↓
-Unique Certificate Number
-      ↓
-Certificate Verification
-      ↓
-PDF Download
-```
-
-Features include:
-
-* Certificate generation
-* Unique certificate identification
-* Certificate verification
-* Student certificate management
-* PDF certificate download
-
----
-
-## 🧪 Mock Test System
-
-Students can evaluate their knowledge through course-specific mock tests.
-
-### Features
-
-* Create mock tests
-* Add questions
-* Attempt tests
-* Submit answers
-* Store test attempts
-* View results
-
----
-
-## ⭐ Review System
-
-Students can submit reviews for courses they have enrolled in.
-
-The system supports:
-
-* Course reviews
-* Review submission
-* Review retrieval
-* Course-specific feedback
-
----
-
-# 🛠️ Technology Stack
-
-## Backend
-
-| Technology      | Purpose                        |
-| --------------- | ------------------------------ |
-| Java 21         | Core programming language      |
-| Spring Boot     | Backend framework              |
-| Spring MVC      | Web and request handling       |
-| Spring Data JPA | Data access                    |
-| Hibernate       | ORM                            |
-| Spring Security | Authentication & authorization |
-| Maven           | Dependency management & build  |
-
-## Frontend
-
-| Technology | Purpose               |
-| ---------- | --------------------- |
-| HTML5      | Page structure        |
-| CSS3       | Styling               |
-| Thymeleaf  | Server-side rendering |
-
-## Database
-
-| Technology    | Purpose              |
-| ------------- | -------------------- |
-| PostgreSQL    | Primary database     |
-| JPA/Hibernate | Database persistence |
-
-## Integrations & Libraries
-
-* Razorpay Payment Gateway
-* Gmail SMTP
-* Lombok
-* PDFBox
-* Swagger / OpenAPI
-* Maven Wrapper
-
----
-
-# 🏗️ Application Architecture
-
-EduTrack follows a layered architecture:
+## 🏗️ Architecture
 
 ```text
                     ┌─────────────────────┐
                     │      Frontend       │
-                    │ HTML / CSS /        │
+                    │ HTML • CSS •        │
                     │ Thymeleaf           │
                     └──────────┬──────────┘
                                │
                                ▼
                     ┌─────────────────────┐
                     │    Controllers      │
-                    │ REST / Web Requests │
                     └──────────┬──────────┘
                                │
                                ▼
                     ┌─────────────────────┐
                     │      Services       │
-                    │ Business Logic      │
+                    │   Business Logic    │
                     └──────────┬──────────┘
                                │
                                ▼
                     ┌─────────────────────┐
                     │    Repositories     │
-                    │ Spring Data JPA     │
+                    │    Spring Data JPA  │
                     └──────────┬──────────┘
                                │
                                ▼
                     ┌─────────────────────┐
                     │     PostgreSQL      │
-                    │      Database       │
                     └─────────────────────┘
 ```
 
 ---
 
-# 📂 Project Structure
+## 📚 Learning Workflow
+
+```text
+Register
+   ↓
+Email Verification
+   ↓
+Login
+   ↓
+Browse Courses
+   ↓
+Select Course
+   ↓
+Razorpay Payment
+   ↓
+Course Enrollment
+   ↓
+Modules & Lessons
+   ↓
+Track Progress
+   ↓
+Mock Test
+   ↓
+Course Completion
+   ↓
+Certificate Generation
+```
+
+---
+
+## 💳 Payment Integration
+
+EduTrack uses **Razorpay** for online course payments.
+
+```text
+Select Course
+      ↓
+Create Payment Order
+      ↓
+Razorpay Checkout
+      ↓
+Payment
+      ↓
+Payment Verification
+      ↓
+Course Enrollment
+```
+
+---
+
+## 🔐 Security
+
+The application uses **Spring Security** with role-based access control.
+
+### Roles
+
+```text
+👨‍💼 ADMIN
+👨‍🏫 TRAINER
+👨‍🎓 STUDENT
+```
+
+Security functionality includes:
+
+* Authentication
+* Role-based authorization
+* Email OTP verification
+* Password recovery
+* Protected admin operations
+* Protected trainer operations
+* Protected student operations
+
+---
+
+## 🏆 Certificate System
+
+Students can receive certificates after completing their courses.
+
+**Certificate features:**
+
+* Certificate generation
+* Unique certificate identification
+* Certificate verification
+* PDF certificate download
+
+---
+
+## 📂 Project Structure
 
 ```text
 EduTrack/
@@ -279,7 +199,6 @@ EduTrack/
 │   ├── main/
 │   │   ├── java/
 │   │   │   └── com/jsp/CourseHub/
-│   │   │       │
 │   │   │       ├── config/
 │   │   │       ├── controller/
 │   │   │       ├── dto/
@@ -295,78 +214,28 @@ EduTrack/
 │   │   │
 │   │   └── resources/
 │   │       ├── static/
-│   │       │   └── css/
-│   │       │
-│   │       ├── templates/
-│   │       │   ├── admin/
-│   │       │   ├── course-details.html
-│   │       │   ├── index.html
-│   │       │   ├── login.html
-│   │       │   ├── register.html
-│   │       │   ├── student-dashboard.html
-│   │       │   ├── trainer-dashboard.html
-│   │       │   └── take-mock.html
-│   │       │
-│   │       └── application.properties
+│   │       └── templates/
 │   │
 │   └── test/
 │
 ├── .gitignore
-├── HELP.md
+├── pom.xml
 ├── mvnw
 ├── mvnw.cmd
-├── pom.xml
 └── README.md
 ```
 
 ---
 
-# 🗄️ Main Domain Entities
+## ⚙️ Configuration
 
-The application manages several related entities:
-
-```text
-User
- ├── Student
- └── Trainer
-
-Course
- ├── Category
- ├── Module
- │    ├── Lesson
- │    └── ModuleProgress
- ├── CourseProgress
- ├── Review
- ├── MockTest
- │    ├── Question
- │    └── MockTestAttempt
- └── Certificate
-
-Payment
- └── Enrollment
-```
-
----
-
-# ⚙️ Configuration
-
-Before running the application locally, configure the required environment-specific properties.
-
-Create:
+Create your local:
 
 ```text
 src/main/resources/application.properties
 ```
 
-Use your local database and service credentials.
-
-For security, **do not commit real passwords, API secrets, or email credentials to GitHub**.
-
-A safe configuration template can be maintained as:
-
-```text
-application.properties.example
-```
+Configure your PostgreSQL, Gmail SMTP, and Razorpay credentials.
 
 Example:
 
@@ -374,162 +243,79 @@ Example:
 spring.application.name=CourseHub
 
 spring.datasource.url=jdbc:postgresql://localhost:5432/eduTrack
-spring.datasource.username=YOUR_POSTGRES_USERNAME
-spring.datasource.password=YOUR_POSTGRES_PASSWORD
+spring.datasource.username=YOUR_USERNAME
+spring.datasource.password=YOUR_PASSWORD
 
 spring.jpa.hibernate.ddl-auto=update
 
 spring.mail.host=smtp.gmail.com
 spring.mail.port=587
-spring.mail.username=YOUR_GMAIL_USERNAME
-spring.mail.password=YOUR_GMAIL_APP_PASSWORD
+spring.mail.username=YOUR_EMAIL
+spring.mail.password=YOUR_APP_PASSWORD
 
-razorpay.key=YOUR_RAZORPAY_TEST_KEY
-razorpay.secret=YOUR_RAZORPAY_TEST_SECRET
+razorpay.key=YOUR_RAZORPAY_KEY
+razorpay.secret=YOUR_RAZORPAY_SECRET
 ```
 
----
-
-# 🔑 External Services
-
-EduTrack uses external services for specific functionality:
-
-### Razorpay
-
-Used for online course payments.
-
-### Gmail SMTP
-
-Used for email communication and OTP verification.
-
-These credentials should be configured locally and **never committed to the repository**.
+> ⚠️ **Never commit real passwords, API keys, or secrets to GitHub.**
 
 ---
 
-# 📊 Core Modules
+## 🎯 Project Highlights
 
-| Module              | Functionality                            |
-| ------------------- | ---------------------------------------- |
-| Authentication      | Registration, login and OTP verification |
-| User Management     | Student and trainer management           |
-| Course Management   | Course creation and management           |
-| Category Management | Course categorization                    |
-| Enrollment          | Course enrollment                        |
-| Payment             | Razorpay integration                     |
-| Learning            | Modules, lessons and progress            |
-| Mock Tests          | Tests, questions and attempts            |
-| Reviews             | Course reviews                           |
-| Certificates        | Generation and verification              |
-| Administration      | Platform management                      |
+| Feature        | Implementation           |
+| -------------- | ------------------------ |
+| Authentication | Spring Security          |
+| Database       | PostgreSQL               |
+| ORM            | JPA + Hibernate          |
+| Payment        | Razorpay                 |
+| Email          | Gmail SMTP               |
+| Frontend       | Thymeleaf + HTML + CSS   |
+| Build Tool     | Maven                    |
+| Testing        | JUnit / Spring Boot Test |
+| Architecture   | Layered Architecture     |
 
 ---
 
-# 🔄 Student Journey
+## 📌 Key Concepts Demonstrated
 
-```text
-Register
-   ↓
-Email Verification
-   ↓
-Login
-   ↓
-Browse Courses
-   ↓
-View Course
-   ↓
-Make Payment
-   ↓
-Enroll
-   ↓
-Access Course
-   ↓
-Complete Lessons
-   ↓
-Track Progress
-   ↓
-Attempt Mock Test
-   ↓
-Complete Course
-   ↓
-Generate Certificate
-```
-
----
-
-# 💡 What I Learned From This Project
-
-This project provided practical experience with:
-
-* Building Spring Boot applications
-* Designing layered backend architecture
-* Implementing Spring Security
-* Working with JPA and Hibernate
-* Designing relational database entities
-* Implementing CRUD operations
-* Building role-based applications
-* Integrating third-party payment gateways
-* Implementing email OTP workflows
-* Managing course and enrollment relationships
-* Building progress tracking functionality
-* Implementing mock test systems
-* Generating PDF certificates
-* Handling application exceptions
-* Working with Thymeleaf
-* Managing Maven dependencies
-* Using Git and GitHub for version control
-
----
-
-# 🔮 Future Enhancements
-
-Potential improvements include:
-
-* JWT-based authentication for REST APIs
-* Cloud deployment
-* Docker containerization
-* Course video streaming
-* Cloud-based file storage
-* Advanced learning analytics
-* Payment transaction history
-* Automated course completion tracking
-* Email notifications
-* Improved mobile responsiveness
-* Expanded unit and integration test coverage
-* CI/CD pipeline
-
----
-
-# 👩‍💻 Author
-
-## Sadiya A Hospetkazi
-
-**B.E. Computer Science & Engineering (AI & ML)**
-
-Aspiring **Java Full Stack Developer** interested in:
+This project demonstrates practical experience with:
 
 * Java
 * Spring Boot
-* Backend Development
-* REST APIs
-* SQL & Database Development
-* Full-Stack Development
-* Artificial Intelligence
+* Spring Security
+* Spring Data JPA
+* Hibernate
+* REST & MVC architecture
+* CRUD operations
+* Role-based authorization
+* PostgreSQL
+* Payment gateway integration
+* Email OTP
+* Exception handling
+* DTOs
+* Repository pattern
+* Service layer architecture
+* Git & GitHub
 
 ---
 
-## 📌 Project Highlights
+## 👩‍💻 Author
 
-**EduTrack** demonstrates the development of a complete role-based e-learning platform with:
+### Sadiya A Hospetkazi
 
-> **Authentication + Course Management + Enrollment + Payments + Learning Progress + Mock Tests + Reviews + Certificates**
+**B.E. Computer Science & Engineering (AI & ML)**
 
-Built with ❤️ using **Java & Spring Boot**.
+**Java Full Stack Developer | Software Engineer | AI Enthusiast**
+
+Interested in:
+
+`Java` • `Spring Boot` • `Backend Development` • `REST APIs` • `SQL` • `Full-Stack Development` • `AI`
 
 ---
 
 ## ⭐ Support
 
-If you find this project useful, consider giving the repository a ⭐ on GitHub.
+If you like this project, consider giving it a ⭐ on GitHub!
 
- 
- 
+**Built with Java & Spring Boot ❤️**
